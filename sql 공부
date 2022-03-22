@@ -1,0 +1,41 @@
+-- 코드를 입력하세요
+SELECT name, count(name) as count
+from animal_ins
+where name is not null
+group by name
+having count(name)>1
+order by name;
+//프로그래머스에서 sql예제를 푼 것중 하나를 올립니다 
+//예제와함께 as,group by,having를 공부할 예정입니다
+
+//출처:https://programmers.co.kr/learn/courses/30/lessons/59041 
+//프로그래머스 예제
+
+// 1.ALIAS
+// ALIAS는 값에 별칭을 주어 접근을 별칭 형태로 할 수 있도록 하는 역할을 합니다 데이터,칼럼,테이블,서브쿼리,where절 등에 사용된다 합니다 
+//대표적으로 알아보기 힘든 칼럼에 as을 사용한다 합니다 줄여서 "as"라고 합니다
+
+//as문법
+columnName AS 이름 //as로 이름이라는 별칭 부여
+TableName AS 테이블이름 //as로 테이블이름이라는 별칭 부여
+
+//as예제
+
+SELECT NO_NUM AS 사원번호, NO_NAME AS 사원명, AGE AS 나이 FROM EX_TABLE
+
+//출력 NO_NUM=사원번호,NO_NAME=사원명,AGE=나이
+
+//예제2
+
+SELECT NUM1+NUM2 AS TOTAL FROM EX_TABLE
+//해석 NUM1+NUM2의 값은 AS(별칭)으로 출력
+
+//출처:https://coding-factory.tistory.com/84
+
+GROUP BY정리
+
+컬럼을 묶어서 보여주고 싶을때 사용
+
+HAVING 
+
+where 과 비슷 하지만 다르다. having 은 그룹을 필터링 할때 사용되고, where은 행을 필터링 할때 사용된다.
