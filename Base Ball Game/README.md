@@ -21,6 +21,7 @@
 
 아래는 코드입니다
 
+*코드설명은 주석으로 
 
 ![image](https://user-images.githubusercontent.com/97486300/173282380-e6ceb078-99f7-4590-89af-15e6660b7069.png)
 
